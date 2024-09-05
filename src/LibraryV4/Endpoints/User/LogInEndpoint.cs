@@ -27,7 +27,7 @@ public static class LogInEndpoint
 
                 if (await tokenService.IsAuthorizedByNickName(nickName))
                 {
-                    return Results.Ok(tokenService.GetToken(userDto.Id));
+                    return Results.Ok(await tokenService.GetToken(userDto.Id));
                 }
 
                 var token = await tokenService.GenerateToken(userDto.Id);
