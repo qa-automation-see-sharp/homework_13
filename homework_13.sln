@@ -1,24 +1,24 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.10.35013.160
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{CCEF6B23-F9A0-443A-851B-AC8C6B435B04}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{CCEBCA78-A6EB-4987-9DBA-D19E09CD68B2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LibraryV4", "src\LibraryV4\LibraryV4.csproj", "{B254668A-4959-4DC6-BDB9-963DA1735B1A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LibraryV4", "src\LibraryV4\LibraryV4.csproj", "{B254668A-4959-4DC6-BDB9-963DA1735B1A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LibraryV4.xUnit.Tests.Api", "tests\LibraryV4.xUnit.Tests.Api\LibraryV4.xUnit.Tests.Api.csproj", "{3B05FA44-A9EF-452F-84DF-5DBA947EE866}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LibraryV4.xUnit.Tests.Api", "tests\LibraryV4.xUnit.Tests.Api\LibraryV4.xUnit.Tests.Api.csproj", "{3B05FA44-A9EF-452F-84DF-5DBA947EE866}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LibraryV4.NUnit.Api", "tests\LibraryV4.NUnit.Api\LibraryV4.NUnit.Api.csproj", "{61CA6120-994C-40A5-8D9D-FC7B38EBE042}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LibraryV4.NUnit.Api", "tests\LibraryV4.NUnit.Api\LibraryV4.NUnit.Api.csproj", "{61CA6120-994C-40A5-8D9D-FC7B38EBE042}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LibraryV4.Tests.Services", "LibraryV4.Tests.Utilities2\LibraryV4.Tests.Services.csproj", "{6F52006D-A29C-4471-9B4E-C988C27F55FE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
-	EndGlobalSection
-	GlobalSection(NestedProjects) = preSolution
-		{B254668A-4959-4DC6-BDB9-963DA1735B1A} = {CCEF6B23-F9A0-443A-851B-AC8C6B435B04}
-		{3B05FA44-A9EF-452F-84DF-5DBA947EE866} = {CCEBCA78-A6EB-4987-9DBA-D19E09CD68B2}
-		{61CA6120-994C-40A5-8D9D-FC7B38EBE042} = {CCEBCA78-A6EB-4987-9DBA-D19E09CD68B2}
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{B254668A-4959-4DC6-BDB9-963DA1735B1A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -33,5 +33,21 @@ Global
 		{61CA6120-994C-40A5-8D9D-FC7B38EBE042}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{61CA6120-994C-40A5-8D9D-FC7B38EBE042}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{61CA6120-994C-40A5-8D9D-FC7B38EBE042}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6F52006D-A29C-4471-9B4E-C988C27F55FE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6F52006D-A29C-4471-9B4E-C988C27F55FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6F52006D-A29C-4471-9B4E-C988C27F55FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6F52006D-A29C-4471-9B4E-C988C27F55FE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{B254668A-4959-4DC6-BDB9-963DA1735B1A} = {CCEF6B23-F9A0-443A-851B-AC8C6B435B04}
+		{3B05FA44-A9EF-452F-84DF-5DBA947EE866} = {CCEBCA78-A6EB-4987-9DBA-D19E09CD68B2}
+		{61CA6120-994C-40A5-8D9D-FC7B38EBE042} = {CCEBCA78-A6EB-4987-9DBA-D19E09CD68B2}
+		{6F52006D-A29C-4471-9B4E-C988C27F55FE} = {CCEBCA78-A6EB-4987-9DBA-D19E09CD68B2}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {67DB06BB-B7CA-46B1-9922-795A95988A41}
 	EndGlobalSection
 EndGlobal
