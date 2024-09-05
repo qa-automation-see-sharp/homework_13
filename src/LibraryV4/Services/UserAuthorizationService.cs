@@ -24,10 +24,11 @@ public class UserAuthorizationService : IUserAuthorizationService
     public async Task<bool> IsAuthorizedByToken(string authorizationToken)
     {
         var token = await _authorizationTokenRepository.GetToken(authorizationToken);
-        var user = await _userRepository.GetUser(u => u.Id == token.UserId);
 
         if (token is null) return false;
         if (token.ExpirationTime <= DateTime.Now) return false;
+
+        var user = await _userRepository.GetUser(u => u.Id == token.UserId);
 
         _logger.Log(LogLevel.Debug, $"User {user.NickName} is authorized.");
 
