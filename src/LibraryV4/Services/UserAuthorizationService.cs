@@ -26,7 +26,7 @@ public class UserAuthorizationService : IUserAuthorizationService
         var token = await _authorizationTokenRepository.GetToken(authorizationToken);
 
         if (token is null) return false;
-        if (token.ExpirationTime <= DateTime.Now) return false;
+        if (token.ExpirationTime <= DateTime.UtcNow) return false;
 
         var user = await _userRepository.GetUser(u => u.Id == token.UserId);
 
@@ -60,7 +60,7 @@ public class UserAuthorizationService : IUserAuthorizationService
         var token = new AuthorizationToken
         {
             Token = Guid.NewGuid(),
-            ExpirationTime = DateTime.Now.AddMinutes(15)
+            ExpirationTime = DateTime.UtcNow.AddMinutes(15)
         };
 
         await _authorizationTokenRepository.AddToken(token.ToDto(userId));
