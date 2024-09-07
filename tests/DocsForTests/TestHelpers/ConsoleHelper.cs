@@ -1,6 +1,6 @@
 using System;
 
-namespace DocsForTests.TestHelpers;
+namespace LibraryV4.Common.Files.For.Tests.TestHelpers;
 
 public class ConsoleHelper
 {

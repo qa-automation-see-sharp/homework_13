@@ -1,7 +1,7 @@
 using System.Net;
-using DocsForTests.TestHelpers;
+using LibraryV4.Common.Files.For.Tests.TestHelpers;
 using LibraryV4.Contracts.Domain;
-using static DocsForTests.TestHelpers.DataHelper;
+using static LibraryV4.Common.Files.For.Tests.TestHelpers.DataHelper;
 
 namespace LibraryV4.xUnit.Tests.Api.Tests
 {

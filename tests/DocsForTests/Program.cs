@@ -1,6 +1,6 @@
 using System;
 
-namespace DocsForTests;
+namespace LibraryV4.Common.Files.For.Tests;
 
 public class Program
 {

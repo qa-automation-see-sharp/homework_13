@@ -1,7 +1,7 @@
 using System;
 using LibraryV4.Contracts.Domain;
 
-namespace DocsForTests.TestHelpers;
+namespace LibraryV4.Common.Files.For.Tests.TestHelpers;
 
 public class DataHelper
 {
