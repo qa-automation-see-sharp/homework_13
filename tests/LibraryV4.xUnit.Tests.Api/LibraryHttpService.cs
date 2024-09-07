@@ -1,7 +1,7 @@
 using System.Reflection;
 using System.Text;
-using DocsForTests;
-using DocsForTests.TestHelpers;
+using LibraryV4.Common.Files.For.Tests;
+using LibraryV4.Common.Files.For.Tests.TestHelpers;
 using LibraryV4.Contracts.Domain;
 using Microsoft.AspNetCore.Mvc.Testing;
 using Newtonsoft.Json;
