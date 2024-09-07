@@ -57,7 +57,7 @@ namespace LibraryV4.xUnit.Tests.Api.Tests
         [Fact]
         public async Task LoginUser_ReturnOK()
         {
-            var message = await _libraryHttpService.LogIn(User);
+            var message = await _libraryHttpService.LogIn(_libraryHttpService.User);
             var json = await message.Content.ReadAsStringAsync();
             var obj = JsonConvert.DeserializeObject<AuthorizationToken>(json);
 

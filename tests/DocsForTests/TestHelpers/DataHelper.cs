@@ -57,6 +57,7 @@ public class DataHelper
         public static string ExistUser(string nickName) => $"User with nickname {nickName} already exists";
         public static string ExistBook(Book book) => $"{book.Title} by {book.Author}, {book.YearOfRelease} already exists";
         public static string NotFoundBookByTitle(Book book) => $"The books this title: {book.Title}, was not found.";
+        public static string NotFoundBookByAuthor(Book book) => $"The books by author: {book.Author}, was not found.";
         public static string DeleteBookReturnOK(Book book) => $"{book.Title} by {book.Author} deleted";
         public static string DeleteBookNotFound(string title, string author) => $"Book :{title} by {author} not found";
     }

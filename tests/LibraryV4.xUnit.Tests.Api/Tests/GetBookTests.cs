@@ -84,7 +84,7 @@ namespace LibraryV4.xUnit.Tests.Api.Tests
             Assert.Multiple(() =>
             {
                 Assert.Equal(response.StatusCode, HttpStatusCode.NotFound);
-                Assert.True(s.Equals(DataHelper.ErrorMessage.NotFoundBookByTitle(book)));
+                Assert.True(s.Equals(DataHelper.ErrorMessage.NotFoundBookByAuthor(book)));
             });
         }
 
