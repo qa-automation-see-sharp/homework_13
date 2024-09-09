@@ -1,11 +1,10 @@
 ﻿using System.Net;
 using LibraryV4.Contracts.Domain;
-using LibraryV4.NUnit.Tests.Api.Fixtures;
-using LibraryV4.NUnit.Tests.Api.Services;
+using LibraryV4.NUnit.Api.Fixtures;
 using Newtonsoft.Json;
-using static LibraryV4.NUnit.Tests.Api.TestHelpers.DataHelper;
+using static LibraryV4.NUnit.Api.TestHelpers.DataHelper;
 
-namespace LibraryV3.NUnit.Tests.Api.Tests;
+namespace LibraryV4.NUnit.Api.EndpointTests;
 
 public class UsersTests : LibraryV4TestFixture
 {

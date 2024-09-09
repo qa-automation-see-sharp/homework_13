@@ -1,10 +1,9 @@
 ﻿using System.Text;
 using LibraryV4.Contracts.Domain;
-using LibraryV4.NUnit.Tests.Api.TestHelpers;
-using Microsoft.Extensions.Configuration.UserSecrets;
+using LibraryV4.NUnit.Api.TestHelpers;
 using Newtonsoft.Json;
 
-namespace LibraryV4.NUnit.Tests.Api.Services;
+namespace LibraryV4.NUnit.Api.Services;
 
 public class LibraryHttpService
 {
@@ -87,7 +86,7 @@ public class LibraryHttpService
     }
 
 
-    public async Task<HttpResponseMessage> PostBook(string token, Book book)
+    public async Task<HttpResponseMessage> PostBook(string? token, Book book)
     {
         var url = EndpointsForTest.Books.Create(token);
 
@@ -105,7 +104,7 @@ public class LibraryHttpService
 
     public async Task<HttpResponseMessage> PostBook(Book book)
     {
-        var url = EndpointsForTest.Books.Create(AuthorizationToken.Token!);
+        var url = EndpointsForTest.Books.Create(AuthorizationToken?.Token.ToString());
 
         var json = JsonConvert.SerializeObject(book);
         var content = new StringContent(json, Encoding.UTF8, "application/json");
@@ -149,7 +148,7 @@ public class LibraryHttpService
 
     public async Task<HttpResponseMessage> DeleteBook(string title, string author)
     {
-        var url = EndpointsForTest.Books.Delete(title, author, AuthorizationToken.Token);
+        var url = EndpointsForTest.Books.Delete(title, author, AuthorizationToken.Token.ToString());
 
         var response = await _httpClient.DeleteAsync(url);
         var jsonString = await response.Content.ReadAsStringAsync();

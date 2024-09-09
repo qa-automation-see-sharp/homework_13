@@ -25,7 +25,6 @@
     </ItemGroup>
 
     <ItemGroup>
-      <Folder Include="Fixtures\" />
       <Folder Include="Tests\" />
       <Folder Include="TestHelpers\" />
       <Folder Include="Services\" />

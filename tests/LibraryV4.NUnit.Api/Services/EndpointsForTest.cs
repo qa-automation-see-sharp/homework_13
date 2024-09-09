@@ -1,4 +1,4 @@
-﻿namespace LibraryV4.NUnit.Tests.Api.Services;
+﻿namespace LibraryV4.NUnit.Api.Services;
 
 public class EndpointsForTest
 {
@@ -16,7 +16,7 @@ public class EndpointsForTest
     {
         private const string Base = $"{ApiBase}/books";
 
-        public static string Create(string token) => $"{Base}/create?token={token}";
+        public static string Create(string? token) => $"{Base}/create?token={token}";
 
         public static string GetBooksByTitle(string title) => $"{Base}/by-title/{title}";
         public static string GetBooksByAuthor(string author) => $"{Base}/by-author/{author}";

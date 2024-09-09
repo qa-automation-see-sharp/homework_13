@@ -1,9 +1,8 @@
 ﻿using System.Net;
-using LibraryV4.NUnit.Tests.Api.Fixtures;
-using LibraryV4.NUnit.Tests.Api.Services;
-using static LibraryV4.NUnit.Tests.Api.TestHelpers.DataHelper;
+using LibraryV4.NUnit.Api.Fixtures;
+using static LibraryV4.NUnit.Api.TestHelpers.DataHelper;
 
-namespace LibraryV4.NUnit.Tests.Api.Tests;
+namespace LibraryV4.NUnit.Api.EndpointTests;
 
 public class DeleteBookTests : LibraryV4TestFixture
 {

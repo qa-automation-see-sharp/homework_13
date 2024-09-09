@@ -107,7 +107,7 @@ public class LibraryHttpService
 
     public async Task<HttpResponseMessage> PostBook(Book book)
     {
-        var url = EndpointsForTest.Books.Create(AuthorizationToken.Token!);
+        var url = EndpointsForTest.Books.Create(AuthorizationToken.Token.ToString());
 
         var json = JsonConvert.SerializeObject(book);
         var content = new StringContent(json, Encoding.UTF8, "application/json");
@@ -151,7 +151,7 @@ public class LibraryHttpService
 
     public async Task<HttpResponseMessage> DeleteBook(string title, string author)
     {
-        var url = EndpointsForTest.Books.Delete(title, author, AuthorizationToken.Token);
+        var url = EndpointsForTest.Books.Delete(title, author, AuthorizationToken.Token.ToString());
 
         var response = await _httpClient.DeleteAsync(url);
         var jsonString = await response.Content.ReadAsStringAsync();

@@ -1,7 +1,7 @@
-﻿using LibraryV4.NUnit.Tests.Api.Services;
+﻿using LibraryV4.NUnit.Api.Services;
 using Microsoft.AspNetCore.Mvc.Testing;
 
-namespace LibraryV4.NUnit.Tests.Api.Fixtures;
+namespace LibraryV4.NUnit.Api.Fixtures;
 
 [TestFixture]
 public class LibraryV4TestFixture
