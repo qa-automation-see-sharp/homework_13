@@ -15,9 +15,11 @@ public static class CreateUserEndpoint
             if (await repository.GetUser(u => u.NickName == user.NickName) is not null)
             {
                 return Results.BadRequest($"User with nickname {user.NickName} already exists");
-            }
-
-            await repository.AddUser(user);
+            } else if (string.IsNullOrWhiteSpace(user.NickName) || string.IsNullOrWhiteSpace(user.Password))
+            {
+                return Results.BadRequest("User must have a full nickname and password");
+            } else 
+                await repository.AddUser(user);
 
             return Results.Created(ApiEndpoints.Users.Register, new { nickName = user.NickName , fullName = user.FullName});
             })
