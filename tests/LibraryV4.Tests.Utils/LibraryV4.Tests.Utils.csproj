@@ -7,8 +7,7 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <Folder Include="Services\" />
-      <Folder Include="TestHelpers\" />
+      <ProjectReference Include="..\..\src\LibraryV4\LibraryV4.csproj" />
     </ItemGroup>
 
 </Project>

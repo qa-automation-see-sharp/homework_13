@@ -32,6 +32,7 @@
 
     <ItemGroup>
       <ProjectReference Include="..\..\src\LibraryV4\LibraryV4.csproj" />
+      <ProjectReference Include="..\LibraryV4.Tests.Utils\LibraryV4.Tests.Utils.csproj" />
     </ItemGroup>
 
 </Project>
