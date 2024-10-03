@@ -1,13 +1,9 @@
 ﻿using LibraryV4.Contracts.Domain;
 using LibraryV4.Services;
 using LibraryV4.NUnit.Api.TestHelpers;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Net;
-using System.Text;
-using System.Threading.Tasks;
 
+//TODO fix namespace
 namespace LibraryV4.NUnit.Tests.Api.Tests
 {
     public class DeleteBookTests

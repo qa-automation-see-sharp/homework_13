@@ -1,9 +1,4 @@
 ﻿using LibraryV4.Contracts.Domain;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace LibraryV4.NUnit.Api.TestHelpers
 {

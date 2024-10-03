@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using LibraryV4.Contracts.Domain;
+﻿using LibraryV4.Contracts.Domain;
 
+//TODO fix namespace
 namespace LibraryV4.xUnit.Tests.Api.Tests.TestHelpers
 {
     public static class UserHelpers

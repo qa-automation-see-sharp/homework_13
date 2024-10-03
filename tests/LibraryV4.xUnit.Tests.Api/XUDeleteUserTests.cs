@@ -4,6 +4,7 @@ using LibraryV4.xUnit.Tests.Api.Tests.TestHelpers;
 using System.Net;
 using Xunit.Abstractions;
 
+//TODO fix namespace
 namespace LibraryV4.xUnit.Tests.Api.Tests
 {
     [Collection("Non-Parallel Collection")]
@@ -75,6 +76,7 @@ namespace LibraryV4.xUnit.Tests.Api.Tests
             );
         }
 
+        //TODO if this code is not used, should it be here?
         //Teardown
         public async Task DisposeAsync()
         {

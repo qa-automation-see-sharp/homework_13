@@ -1,14 +1,7 @@
-﻿using System;
-using System;
-using System;
-using System.Net;
-using System.Collections.Generic;
-using LibraryV4;
-using LibraryV4.Endpoints;
+﻿using System.Net;
 using LibraryV4.Contracts.Domain;
 
 using Microsoft.AspNetCore.Mvc.Testing;
-using Microsoft.OpenApi.Validations;
 //using MongoDB.Bson.IO;
 using Newtonsoft.Json;
 

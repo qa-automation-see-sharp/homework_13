@@ -6,6 +6,7 @@ using Newtonsoft.Json;
 using System.Net;
 using Xunit.Abstractions;
 
+//TODO fix namespace
 namespace LibraryV4.xUnit.Tests.Api.Tests
 {
     [Collection("Non-Parallel Collection")]

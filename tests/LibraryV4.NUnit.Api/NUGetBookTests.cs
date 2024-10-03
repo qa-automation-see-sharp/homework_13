@@ -1,17 +1,10 @@
-﻿using System;
-using System.Net;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Net;
 using Newtonsoft.Json;
-using NUnit.Framework;
-using System.Security.Cryptography.X509Certificates;
-using Microsoft.AspNetCore.Mvc;
 using LibraryV4.Contracts.Domain;
 using LibraryV4.Services;
 using LibraryV4.NUnit.Api.TestHelpers;
 
+//TODO fix namespace
 namespace LibraryV4.NUnit.Tests.Api.Tests
 {
     public class GetBookTests

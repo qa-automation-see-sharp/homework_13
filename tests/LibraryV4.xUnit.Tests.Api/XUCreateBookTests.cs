@@ -7,6 +7,7 @@ using System.Net;
 using Xunit.Abstractions;
 
 
+//TODO fix namespace
 namespace LibraryV4.xUnit.Tests.Api.Tests
 {
     [Collection("Non-Parallel Collection")]
@@ -29,6 +30,7 @@ namespace LibraryV4.xUnit.Tests.Api.Tests
         //setup2
         public async Task InitializeAsync()
         {
+            //TODO if this code is not used, should it be here?
             //await _libraryService.CreateTestUser();
             //await _libraryService.LoginTestUser();
         }
@@ -69,6 +71,8 @@ namespace LibraryV4.xUnit.Tests.Api.Tests
         {
             //Arrange
             _book = BookHelpers.CreateBook();
+            
+            //TODO if this code is not used, should it be here?
             //_logger.LogInformation($"Book: {_book.Title}, {_book.Author}, {_book.YearOfRelease}");
 
             //Act

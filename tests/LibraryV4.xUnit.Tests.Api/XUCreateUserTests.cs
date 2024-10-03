@@ -1,5 +1,4 @@
-﻿using System;
-using LibraryV4.Services;
+﻿using LibraryV4.Services;
 using Xunit.Abstractions;
 using Newtonsoft.Json;
 using System.Net;
@@ -7,6 +6,7 @@ using LibraryV4.Contracts.Domain;
 using LibraryV4.xUnit.Tests.Api.Tests.TestHelpers;
 
 
+//TODO fix namespace
 namespace LibraryV4.xUnit.Tests.Api.Tests
 {
     [Collection("Non-Parallel Collection")]
