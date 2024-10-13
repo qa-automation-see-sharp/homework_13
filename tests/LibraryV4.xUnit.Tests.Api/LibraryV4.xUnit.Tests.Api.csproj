@@ -22,4 +22,8 @@
         </PackageReference>
     </ItemGroup>
 
+    <ItemGroup>
+      <ProjectReference Include="..\..\src\LibraryV4\LibraryV4.csproj" />
+    </ItemGroup>
+
 </Project>

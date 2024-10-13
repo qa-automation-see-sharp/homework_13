@@ -138,4 +138,9 @@ public class LibraryHttpService
 
         return response;
     }
+
+    public async Task<object> PostBook(Guid token, Book book)
+    {
+        throw new NotImplementedException();
+    }
 }
