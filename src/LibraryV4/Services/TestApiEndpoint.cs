@@ -34,7 +34,7 @@ public class TestApiEndpoint
             return $"{Base}/by-author/{author}";
         }
 
-        public static string Delete(string title, string author, string token)
+        public static string Delete(string title, string author, Guid token)
         {
             return $"{Base}/delete?title={title}&author={author}&token={token}";
         }

@@ -126,7 +126,7 @@ public class LibraryHttpService
         return response;
     }
 
-    public async Task<HttpResponseMessage> DeleteBook(string token, string title, string author)
+    public async Task<HttpResponseMessage> DeleteBook(Guid token, string title, string author)
     {
         var url = TestApiEndpoint.Books.Delete(title, author, token);
         var response = await _httpClient.DeleteAsync(url);
