@@ -19,9 +19,9 @@ public class TestApiEndpoint
     {
         private const string Base = $"{ApiBase}/books";
 
-        public static string Create(string token)
+        public static string Create(Guid token)
         {
-            return $"{Base}/create?token={token}";
+            return $"{Base}/create?token={token.ToString()}";
         }
 
         public static string GetBooksByTitle(string title)

@@ -85,7 +85,7 @@ public class LibraryHttpService
         return response;
     }*/
 
-    public async Task<HttpResponseMessage> PostBook(string token, Book book)
+    public async Task<HttpResponseMessage> PostBook(Guid token, Book book)
     {
         var url = TestApiEndpoint.Books.Create(token);
         var json = JsonConvert.SerializeObject(book);
