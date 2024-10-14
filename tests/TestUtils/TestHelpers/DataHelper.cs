@@ -1,6 +1,6 @@
 using LibraryV4.Contracts.Domain;
 
-namespace LibraryV4.TestHelpers;
+namespace TestUtils;
 
 public class DataHelper
 {

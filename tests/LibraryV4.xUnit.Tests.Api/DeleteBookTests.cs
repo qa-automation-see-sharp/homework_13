@@ -1,19 +1,20 @@
 using System.Net;
 using LibraryV4.Contracts.Domain;
-using LibraryV4.Fixtures;
-using LibraryV4.TestHelpers;
+using LibraryV4.Services;
+using TestUtils;
 using Newtonsoft.Json;
 
 namespace LibraryV4.xUnit.Tests.Api;
 
-public class DeleteBookTests : LibraryTestFixture
+public class DeleteBookTests : IAsyncLifetime, IClassFixture<LibraryHttpService>
 {
-    public DeleteBookTests()
+    private readonly LibraryHttpService _libraryHttpService;
+    public DeleteBookTests(LibraryHttpService libraryHttpService)
     {
-        OneTimeSetUpAsync().GetAwaiter().GetResult();
+        _libraryHttpService = libraryHttpService;
     }
     
-    private async Task OneTimeSetUpAsync()
+    public async Task InitializeAsync()
     {
         await _libraryHttpService.LogIn(_libraryHttpService.DefaultUser, true);
     }
@@ -23,19 +24,24 @@ public class DeleteBookTests : LibraryTestFixture
     {
         // Arrange
         var book = DataHelper.CreateBook();
-        
-        var httpResponseMessage = 
+
+        var httpResponseMessage =
             await _libraryHttpService.PostBook(_libraryHttpService.DefaultUserAuthToken.Token, book);
         var content = await httpResponseMessage.Content.ReadAsStringAsync();
         var bookFromResponse = JsonConvert.DeserializeObject<Book>(content);
-        
+
         // Act
-        var deleteResponseMessage = 
+        var deleteResponseMessage =
             await _libraryHttpService
                 .DeleteBook(_libraryHttpService.DefaultUserAuthToken.Token, bookFromResponse.Title,
                     bookFromResponse.Author);
-        
+
         // Assert
         Assert.Equal(HttpStatusCode.OK, deleteResponseMessage.StatusCode);
+    }
+    
+    public Task DisposeAsync()
+    {
+        return Task.CompletedTask;
     }
 }

@@ -1,7 +1,7 @@
 using System.Net;
 using LibraryV4.Contracts.Domain;
 using LibraryV4.Services;
-using LibraryV4.TestHelpers;
+using TestUtils;
 using Newtonsoft.Json;
 
 namespace LibraryV4.xUnit.Tests.Api;
