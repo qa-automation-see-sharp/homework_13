@@ -1,19 +1,25 @@
 using System.Net;
 using LibraryV4.Contracts.Domain;
-using LibraryV4.Fixtures;
+using LibraryV4.Services;
 using LibraryV4.TestHelpers;
 using Newtonsoft.Json;
 
 namespace LibraryV4.xUnit.Tests.Api;
 
-public class GetBooksTests : LibraryTestFixture
+public class GetBooksTests : IAsyncLifetime, IClassFixture<LibraryHttpService>
 {
+    private readonly LibraryHttpService _libraryHttpService;
+    
     private Book _book;
 
-    private async Task Initialize()
+    public GetBooksTests(LibraryHttpService libraryHttpService)
+    {
+        _libraryHttpService = libraryHttpService;
+    }
+    
+    public async Task InitializeAsync()
     {
         await _libraryHttpService.LogIn(_libraryHttpService.DefaultUser, true);
-        
     }
 
     [Fact]
@@ -46,5 +52,10 @@ public class GetBooksTests : LibraryTestFixture
             await _libraryHttpService.PostBook(_libraryHttpService.DefaultUserAuthToken.Token, book);
         var content = await httpResponseMessage.Content.ReadAsStringAsync();
         _book = JsonConvert.DeserializeObject<Book>(content);
+    }
+    
+    public Task DisposeAsync()
+    {
+        return Task.CompletedTask;
     }
 }
