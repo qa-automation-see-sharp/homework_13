@@ -11,8 +11,6 @@ public class LibraryTestFixture
     [OneTimeSetUp]
     public async Task OneTimeSetUp()
     {
-        _libraryHttpService.Configure("http://localhost:5111/");
-
         await _libraryHttpService.CreateDefaultUser();
     }
 
